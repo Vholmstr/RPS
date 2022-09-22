@@ -1,10 +1,11 @@
+const buttons = document.querySelectorAll('button');
+const resultText = document.querySelector('#result-text')
 const choices = ["rock", "paper", "scissors"];
 
 function computerPlay () {
     let randomNum = Math.floor(Math.random()*3);
     return choices[randomNum];
 }
-
 
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
@@ -19,12 +20,16 @@ function playRound (playerSelection, computerSelection) {
     } else {
         return "Computer wins, " + computerSelection + " beats " + playerSelection  + ".";
     }
-        
 }
 
-function game () {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Pick between rock, paper and scissors");
-        console.log(playRound(playerSelection, computerPlay()));
-    }
+function game (selection) {
+    playRound(selection, computerPlay());
 }
+
+buttons.forEach(button => {
+    button.addEventListener('click', e => {
+        const pChoice = e.target.getAttribute("data-type");
+        const result = playRound(pChoice, computerPlay());
+        resultText.textContent = result;
+    })
+})

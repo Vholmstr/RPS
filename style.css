@@ -1,0 +1,30 @@
+body {
+    background-color: gainsboro;
+    margin: 25px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.score-container {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-container {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

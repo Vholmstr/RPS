@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class=container>
+        <div class="score-container">
+            <div id="player">
+                Player points:
+            </div>
+            <div id="computer">
+                Computer points:
+            </div>
+        </div>
+        
+        <div class="buttons-container">
+            <button data-type="Rock">Rock</button>
+            <button data-type="Paper">Paper</button>
+            <button data-type="Scissors">Scissors</button>
+        </div>
+        <div class="results-container">
+            <p>Choose your weapon!</p>
+            <h1 id="result-text"></h1>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
