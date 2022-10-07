@@ -10,21 +10,26 @@
 <body>
     <div class=container>
         <div class="score-container">
-            <div id="player">
-                Player points:
+            <div id="player" class="grey-box">
+                Player points: 0
             </div>
-            <div id="computer">
-                Computer points:
+            <div id="computer" class="grey-box">
+                Computer points: 0
             </div>
         </div>
-        
+        <p>Choose your weapon!</p>
         <div class="buttons-container">
-            <button data-type="Rock">Rock</button>
-            <button data-type="Paper">Paper</button>
-            <button data-type="Scissors">Scissors</button>
+            <button data-type="Rock">
+                <img src="rock.png" alt="Rock" data-type="Rock">
+            </button>
+            <button data-type="Paper">
+                <img src="paper.png" alt="Paper" data-type="Paper">
+            </button>
+            <button data-type="Scissors">
+                <img src="scissors.png" alt="Scissors" data-type="Scissors">
+            </button>
         </div>
         <div class="results-container">
-            <p>Choose your weapon!</p>
             <h1 id="result-text"></h1>
         </div>
     </div>
